@@ -1,6 +1,6 @@
 {
   "name": "@akhilesharora/abdm-abha-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ABDM ABHA (Ayushman Bharat Health Account) SDK for Node.js - V3 API integration for Indian healthcare systems",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
