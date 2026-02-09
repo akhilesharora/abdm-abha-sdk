@@ -1,8 +1,10 @@
 # ABDM ABHA SDK
 
+> **Unofficial Version** - This SDK is not affiliated with or endorsed by ABDM/NHA.
+
 ABDM (Ayushman Bharat Digital Mission) ABHA integration SDK for Node.js applications.
 
-Based on **ABHA V3 APIs SOP V1.2** (October 2024).
+Based on **ABHA V3 APIs SOP V1.2** (October 2024) - [Official Documentation](https://abdm.gov.in/publications).
 
 [![npm version](https://badge.fury.io/js/abdm-abha-sdk.svg)](https://www.npmjs.com/package/abdm-abha-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
