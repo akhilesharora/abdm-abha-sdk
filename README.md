@@ -1,10 +1,10 @@
-# ABHA SDK
+# ABDM ABHA SDK
 
 ABDM (Ayushman Bharat Digital Mission) ABHA integration SDK for Node.js applications.
 
 Based on **ABHA V3 APIs SOP V1.2** (October 2024).
 
-[![npm version](https://badge.fury.io/js/abha-sdk.svg)](https://www.npmjs.com/package/abha-sdk)
+[![npm version](https://badge.fury.io/js/abdm-abha-sdk.svg)](https://www.npmjs.com/package/abdm-abha-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -19,15 +19,15 @@ Based on **ABHA V3 APIs SOP V1.2** (October 2024).
 ## Installation
 
 ```bash
-npm install abha-sdk
+npm install abdm-abha-sdk
 ```
 
 ```bash
-yarn add abha-sdk
+yarn add abdm-abha-sdk
 ```
 
 ```bash
-pnpm add abha-sdk
+pnpm add abdm-abha-sdk
 ```
 
 ## Quick Start
@@ -35,7 +35,7 @@ pnpm add abha-sdk
 ### Validate ABHA Number
 
 ```typescript
-import { isValidABHANumber, formatABHANumber, maskABHANumber } from 'abha-sdk'
+import { isValidABHANumber, formatABHANumber, maskABHANumber } from 'abdm-abha-sdk'
 
 // Validate format
 isValidABHANumber('91-1234-5678-9012')  // true
@@ -51,7 +51,7 @@ maskABHANumber('91-1234-5678-9012')     // 'XX-XXXX-XXXX-9012'
 ### Validate ABHA Address
 
 ```typescript
-import { isValidABHAAddress, formatABHAAddress, parseABHAAddress } from 'abha-sdk'
+import { isValidABHAAddress, formatABHAAddress, parseABHAAddress } from 'abdm-abha-sdk'
 
 // Validate
 isValidABHAAddress('john.doe@abdm')     // true (production)
@@ -69,7 +69,7 @@ parseABHAAddress('john.doe@abdm')       // { username: 'john.doe', domain: 'abdm
 ### Validate Mobile & Aadhaar
 
 ```typescript
-import { isValidMobile, isValidAadhaar, maskMobile, maskAadhaar } from 'abha-sdk'
+import { isValidMobile, isValidAadhaar, maskMobile, maskAadhaar } from 'abdm-abha-sdk'
 
 // Mobile (Indian 10-digit)
 isValidMobile('9876543210')     // true
@@ -93,7 +93,7 @@ import type {
   OTPVerifyResponse,
   MobileLoginResponse,
   ABHAAccountSummary,
-} from 'abha-sdk'
+} from 'abdm-abha-sdk'
 ```
 
 ### Constants
@@ -107,7 +107,7 @@ import {
   LOGIN_HINTS,
   OTP_SYSTEMS,
   ERROR_CODES,
-} from 'abha-sdk'
+} from 'abdm-abha-sdk'
 
 // Base URLs
 ABDM_BASE_URLS.sandbox      // 'https://abhasbx.abdm.gov.in/abha/api'
@@ -160,7 +160,7 @@ OTP_SYSTEMS.ABDM            // 'abdm' (OTP to ABHA-linked mobile)
 ### Gender Helpers
 
 ```typescript
-import { toABHAGender, fromABHAGender, getGenderDisplay } from 'abha-sdk'
+import { toABHAGender, fromABHAGender, getGenderDisplay } from 'abdm-abha-sdk'
 
 toABHAGender('MALE')        // 'M'
 fromABHAGender('M')         // 'MALE'
@@ -170,7 +170,7 @@ getGenderDisplay('M')       // 'Male'
 ### Date Helpers
 
 ```typescript
-import { parseABHADate, toABHADate, calculateAge } from 'abha-sdk'
+import { parseABHADate, toABHADate, calculateAge } from 'abdm-abha-sdk'
 
 parseABHADate('26-11-1989')  // Date object
 toABHADate(new Date())       // '10-02-2026'
@@ -206,8 +206,8 @@ calculateAge('26-11-1989')   // 36
 ### Login via ABHA OTP (Recommended for HIP)
 
 ```typescript
-import { API_ENDPOINTS, SCOPES, LOGIN_HINTS, OTP_SYSTEMS } from 'abha-sdk'
-import type { OTPGenerateRequest, OTPVerifyRequest, OTPVerifyResponse } from 'abha-sdk'
+import { API_ENDPOINTS, SCOPES, LOGIN_HINTS, OTP_SYSTEMS } from 'abdm-abha-sdk'
+import type { OTPGenerateRequest, OTPVerifyRequest, OTPVerifyResponse } from 'abdm-abha-sdk'
 
 // Step 1: Generate OTP
 const otpRequest: OTPGenerateRequest = {
@@ -240,7 +240,7 @@ const verifyRequest: OTPVerifyRequest = {
 When logging in via mobile number, the response includes an `accounts` array since multiple ABHAs can be linked to one mobile:
 
 ```typescript
-import type { MobileLoginResponse, ABHAAccountSummary } from 'abha-sdk'
+import type { MobileLoginResponse, ABHAAccountSummary } from 'abdm-abha-sdk'
 
 // Response structure
 const response: MobileLoginResponse = {
@@ -274,7 +274,7 @@ All V3 APIs require these headers:
 All sensitive data (Aadhaar, Mobile, OTP, Password) must be RSA encrypted using the public key from `/v3/profile/public/certificate`.
 
 ```typescript
-import { ENCRYPTION } from 'abha-sdk'
+import { ENCRYPTION } from 'abdm-abha-sdk'
 
 // Algorithm: RSA/ECB/OAEPWithSHA-1AndMGF1Padding
 console.log(ENCRYPTION.ALGORITHM)
@@ -283,7 +283,7 @@ console.log(ENCRYPTION.ALGORITHM)
 ## Error Handling
 
 ```typescript
-import { ERROR_CODES } from 'abha-sdk'
+import { ERROR_CODES } from 'abdm-abha-sdk'
 
 // Common error codes
 ERROR_CODES.INVALID_ABHA_NUMBER    // 'ABHA_INVALID_NUMBER'

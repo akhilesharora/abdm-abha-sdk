@@ -1,5 +1,5 @@
 {
-  "name": "abha-sdk",
+  "name": "abdm-abha-sdk",
   "version": "1.2.0",
   "description": "ABDM ABHA (Ayushman Bharat Health Account) SDK for Node.js - V3 API integration for Indian healthcare systems",
   "main": "dist/index.js",
@@ -45,11 +45,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akhilesharora/abha-sdk"
+    "url": "https://github.com/akhilesharora/abdm-abha-sdk"
   },
-  "homepage": "https://github.com/akhilesharora/abha-sdk#readme",
+  "homepage": "https://github.com/akhilesharora/abdm-abha-sdk#readme",
   "bugs": {
-    "url": "https://github.com/akhilesharora/abha-sdk/issues"
+    "url": "https://github.com/akhilesharora/abdm-abha-sdk/issues"
   },
   "engines": {
     "node": ">=16.0.0"
