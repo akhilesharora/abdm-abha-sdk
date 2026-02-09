@@ -99,6 +99,33 @@ export {
 
   // Encryption
   ENCRYPTION,
+
+  // Headers (NEW)
+  HEADERS,
+
+  // Auth Methods from Profile Response (NEW)
+  AUTH_METHODS_RESPONSE,
+
+  // Status Constants (NEW)
+  ACCOUNT_STATUS,
+  VERIFICATION_STATUS,
+  VERIFICATION_TYPE,
+  ABHA_TYPE,
+
+  // Gender (NEW)
+  GENDER,
+
+  // Auth Result (NEW)
+  AUTH_RESULT,
+
+  // Document Types (NEW)
+  DOCUMENT_TYPES,
+
+  // Scope Combinations (NEW)
+  SCOPE_COMBINATIONS,
+
+  // Token Expiry (NEW)
+  TOKEN_EXPIRY,
 } from './constants'
 
 // =============================================================================
