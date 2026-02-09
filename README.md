@@ -6,7 +6,7 @@ ABDM (Ayushman Bharat Digital Mission) ABHA integration SDK for Node.js applicat
 
 Based on **ABHA V3 APIs SOP V1.2** (October 2024) - [Official Documentation](https://abdm.gov.in/publications).
 
-[![npm version](https://badge.fury.io/js/@akhilesharora/abdm-abha-sdk.svg)](https://www.npmjs.com/package/@akhilesharora/abdm-abha-sdk)
+[![npm version](https://badge.fury.io/js/%40akhilesharora%2Fabdm-abha-sdk.svg)](https://www.npmjs.com/package/@akhilesharora/abdm-abha-sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
